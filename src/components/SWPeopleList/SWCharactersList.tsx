@@ -9,7 +9,9 @@ interface SWCharactersListProps {
 }
 
 export default function SWCharactersList ({people}: SWCharactersListProps) {
-    const renderPeople = () => people.map((character: ICharacter, index: number)=> <SWCharacter key={`character-${index}`} character={character} />);
+    const renderPeople = () => people.map(
+        (character: ICharacter, index: number)=> <SWCharacter key={`character-${index}`} character={character} />
+    );
 
     return <div className='charactersList'>{renderPeople()}</div>;
 }
