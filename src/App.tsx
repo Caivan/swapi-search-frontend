@@ -1,7 +1,7 @@
 import { SetStateAction, useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
-import SWPeopleList from './components/SWPeopleList/SWPeopleList';
+import SWCharactersList from './components/SWPeopleList/SWCharactersList';
 import { useCharactersList } from './hooks/useCharactersList';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       { error && <p>We couldn't perform the search</p> }
       {isLoading ?
         <div>Loading..</div> :
-        <SWPeopleList people={people} />
+        <SWCharactersList people={people} />
       }
     </div>
   )
