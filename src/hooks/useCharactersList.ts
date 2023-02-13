@@ -11,7 +11,6 @@ export const useCharactersList = ({search}: {search?: string}) => {
 
     const getCharacters = useCallback (debounce(
       (search?: string) => {
-        console.log('getCharacters', search);
         try {
           setIsLoading(true);
           getAllPeople(search).then((response: ICharacter[]) => setPeople(response))
