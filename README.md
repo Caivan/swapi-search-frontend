@@ -7,6 +7,7 @@ Search an Star Wars character using an input text.
 - Fetch the characters from the `https://swapi.dev/api/people`
 - Render a list of star wars characters
 - When the user type a new value in the field text the list is updated
+- Debounce the requests on typing
 
 ## Run Locally
 
