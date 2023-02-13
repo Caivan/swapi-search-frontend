@@ -16,7 +16,7 @@ function App() {
     <div className='App'>
       <h1>Start Wars Characters</h1>
       <section className='searchBox'>
-        <input type='text' value={search} onChange={handleChange} ></input>
+        <input aria-label='searchInput' type='text' value={search} onChange={handleChange} ></input>
       </section>
       { error && <p>We couldn't perform the search</p> }
       {isLoading ?
@@ -24,7 +24,7 @@ function App() {
         <SWCharactersList people={people} />
       }
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
