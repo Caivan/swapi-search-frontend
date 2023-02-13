@@ -9,7 +9,19 @@ const getAllPeople = async (searchParam?: string): Promise<ICharacter[]> => {
         const response = await fetch(URL);    
         const json = await response.json();
         
-        return json.results;
+        return json.results.map((character: any) => ({
+            name : character.name,
+            height : character.height,
+            mass : character.mass,
+            hairColor :character.hair_color,
+            skinColor :character.skin_color,
+            eyeColor :character.eye_color,
+            birthYear :character.birth_year,
+            gender : character.gender,
+            created : new Date(character.created),
+            edited :  new Date(character.edited),
+            url :  character.url,
+       }));
     } catch (error) {
         console.error(error);
         throw new HttpRequestError(`Error calling ${URL}`);
